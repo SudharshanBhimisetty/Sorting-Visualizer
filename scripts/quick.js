@@ -8,8 +8,16 @@ function quick(){
     buttons[4].classList.add("button_selected");
     defaultDelay = 0;
     reset.addEventListener("click", refreshPage);
+    
+    var start = performance.now();
+
     quick_sort(0,arr_size-1);
     enable_buttons();
+    
+
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
+
 }
 
 

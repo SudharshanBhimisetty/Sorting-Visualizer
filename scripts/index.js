@@ -3,7 +3,7 @@ var arr_size = arr_size_temp.value;
 var al_speed = document.getElementById('al_speed');
 var new_array = document.getElementById('new_array');
 
-
+var runTime = document.getElementById('runTime');
 var area = document.getElementById('area');
 
 
@@ -22,6 +22,7 @@ var defaultDelay = 0;
 
 function generate_array(){
     area.innerHTML = " ";
+    runTime.innerHTML = " "
     box_size = [];
     boxes = [];
     for(var i=0;i<arr_size;i++){
@@ -34,6 +35,7 @@ function generate_array(){
 }
 
 function update_array(){
+
     arr_size = arr_size_temp.value;
     generate_array();
 }

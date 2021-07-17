@@ -2,12 +2,14 @@ buttons[2].addEventListener("click", insertion)
 
 function insertion(){
     
+    var start = performance.now();
+
     disableButtons()
     reset.disabled = false;
     buttons[2].classList.add("button_selected");
     defaultDelay = 0
     reset.addEventListener("click", refreshPage);
-console.log(box_size)
+
     var key;
     var j;
 
@@ -53,5 +55,8 @@ console.log(box_size)
 
 
     enable_buttons();
+    
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
 
 }

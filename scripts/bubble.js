@@ -7,6 +7,9 @@ function bubble() {
     buttons[0].classList.add("button_selected");
     defaultDelay = 0
     reset.addEventListener("click", refreshPage);
+    var start = performance.now();  
+
+
 
     for (var i = 0; i < box_size.length; i++) {
         for (var j = 0; j < (box_size.length - i - 1); j++) {
@@ -30,6 +33,9 @@ function bubble() {
     }
 
     enable_buttons();
+
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
 
 
 }

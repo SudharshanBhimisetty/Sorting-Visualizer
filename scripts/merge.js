@@ -9,12 +9,11 @@ function merge(){
     defaultDelay = 0;
     reset.addEventListener("click", refreshPage);
     var start = performance.now();  
-    console.log("start is " + start)
- 
+
     merge_partition(0,arr_size-1);
-     var end = performance.now();
-    console.log("end is " + end)
-    console.log(end-start)
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
+
     enable_buttons();
 
 }

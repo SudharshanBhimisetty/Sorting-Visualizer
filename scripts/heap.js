@@ -8,10 +8,14 @@ function heap(){
     buttons[5].classList.add("button_selected");
     defaultDelay = 0;
     reset.addEventListener("click", refreshPage);
-    console.log(box_size)
+    
+    var start = performance.now();
+
     heap_sort(arr_size);
-    console.log(box_size)
     enable_buttons();
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
+
 }
 
 

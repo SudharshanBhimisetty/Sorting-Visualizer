@@ -7,6 +7,10 @@ function selection(){
     buttons[1].classList.add("button_selected");
     defaultDelay = 0
     reset.addEventListener("click", refreshPage);
+    
+    var start = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
+
  
     var min_index;
     for(var i=0;i < box_size.length-1;i++){
@@ -34,4 +38,6 @@ function selection(){
     }
     div_update(boxes[box_size.length-1], box_size[box_size.length-1], "green")
     enable_buttons();
+    var end = performance.now();
+    runTime.innerHTML = "<h6 style='font-family: monospace'>Run Time :</h6>" + (end - start) + " ms";
 }
